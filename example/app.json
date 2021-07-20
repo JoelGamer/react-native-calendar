@@ -1,0 +1,22 @@
+{
+  "name": "react-native-calendar-example",
+  "displayName": "Calendar Example",
+  "expo": {
+    "name": "react-native-calendar-example",
+    "slug": "react-native-calendar-example",
+    "description": "Example app for react-native-calendar",
+    "privacy": "public",
+    "version": "1.0.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}

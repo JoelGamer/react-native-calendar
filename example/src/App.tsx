@@ -1,18 +1,21 @@
-import * as React from 'react';
-
-import { StyleSheet, View, Text } from 'react-native';
+import React, { useState } from 'react';
+import { StyleSheet, View, Text, TouchableHighlight } from 'react-native';
 import Calendar from 'react-native-calendar';
 
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
-
-  React.useEffect(() => {
-    Calendar.multiply(3, 7).then(setResult);
-  }, []);
+  const [isVisible, setIsVisible] = useState(false);
 
   return (
     <View style={styles.container}>
-      <Text>Result: {result}</Text>
+      <Calendar
+        onRequestClose={() => setIsVisible(false)}
+        visible={isVisible}
+      />
+      <TouchableHighlight
+        onPress={() => setIsVisible((prevValue) => !prevValue)}
+      >
+        <Text>Press Me!</Text>
+      </TouchableHighlight>
     </View>
   );
 }
